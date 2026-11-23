@@ -1,0 +1,53 @@
+{
+  "name": "dsh-model-usage-board",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "A live per-model token, spend, and quota board for DeepSeek Harness, with a time-of-day 3D sky.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "host",
+    "assets",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "PUBLISHING.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  },
+  "author": "Terry Chen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lansijian/dsh-model-usage-board.git"
+  },
+  "homepage": "https://github.com/lansijian/dsh-model-usage-board",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "token",
+    "usage",
+    "billing",
+    "theme"
+  ]
+}

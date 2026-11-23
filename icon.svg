@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" role="img" aria-label="Model usage board">
+  <defs>
+    <linearGradient id="mub-icon-bars" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#2f7cf6"/>
+      <stop offset="1" stop-color="#44c98a"/>
+    </linearGradient>
+    <linearGradient id="mub-icon-line" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#7cb8ff"/>
+      <stop offset="1" stop-color="#a6f0c8"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="21" width="5" height="11" rx="2" fill="url(#mub-icon-bars)"/>
+  <rect x="12" y="15" width="5" height="17" rx="2" fill="url(#mub-icon-bars)"/>
+  <rect x="20" y="8" width="5" height="24" rx="2" fill="url(#mub-icon-bars)"/>
+  <path d="M5 17.5c3.2-.7 5.4-3.7 8.5-4.6 3.2-.9 5.6.7 8.7-2.4" fill="none" stroke="url(#mub-icon-line)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="29.5" cy="7.2" r="2.1" fill="#a6f0c8"/>
+</svg>

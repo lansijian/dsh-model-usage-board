@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Model usage board",
+    "description": "A draggable live board for each model's tokens, actual spend, reference cost, and quota. It separates pay-as-you-go, subscription plans, and gateway credits, with day, week, month, quarter, year, and custom views."
+  }
+}
