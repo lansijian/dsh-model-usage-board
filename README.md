@@ -88,17 +88,23 @@ Plan and credit models are audited against their public list rates:
 | StepFun `step-5-preview` (Step Plan) | ¥7 / 1M | ¥20 / 1M | ¥0.7 / 1M | plan cash ¥0; list reference |
 | Claude Opus 5.5 (gateway credits) | $4 / 1M | $20 / 1M | $0.4 / 1M | credits cash ¥0; list reference |
 | Claude Sonnet 5.5 (gateway credits) | $10.1799 / 1M | $50.8995 / 1M | $1.0180 / 1M | calibrated reference; credits cash ¥0 |
+| NEX N2.6 (configured character reference) | — | ¥1.20 / 10k characters | — | `usage.c` preferred; output tokens used only when no character count exists |
 
 Qwen Token Plan personal tiers (list): Lite ¥39/month (20k credits),
 Essential ¥79 (45k), Standard ¥139 (80k), Pro ¥312 (200k). The first-purchase
 promo and preview discounts change the subscription fee, not the list reference
 used here. StepFun Step Plan plan fees are not modeled; its public API list is
 used for the reference. The model rows always show `套餐内` / `积分` plus the
-reference amount, so a plan never masquerades as cash. Sources:
+reference amount, so a plan never masquerades as cash.
+NEX N2.6 is configured at the user's ¥1.20 / 万字符 rate as a reference. The
+public MOSS model list currently marks N2.6 as limited-time free (0 credits),
+so it remains non-cash on this board; the character reference is shown
+separately. Sources:
 [Qwen Token Plan](https://www.qianwenai.com/benefits/tokenplan),
 [Qwen4-Max price details](https://developer.aliyun.com/article/1784343),
 [StepFun pricing](https://platform.stepfun.com/docs/zh/guides/pricing/details),
-[Anthropic pricing](https://platform.claude.com/docs/en/about-claude/pricing).
+[Anthropic pricing](https://platform.claude.com/docs/en/about-claude/pricing),
+[MOSS model pricing](https://platform.mosi.cn/docs/models/overview).
 
 Reference totals are deliberately labelled `按量参考` on the board and in the
 desktop window. They answer “what would these tokens cost at the public

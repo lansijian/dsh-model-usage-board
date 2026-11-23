@@ -48,7 +48,6 @@ const FAMILY_PRICES = [
   { id: 'gemini-flash', test: /gemini.*flash/i, input: 0.3, output: 2.5, cacheRead: 0.075, cacheWrite: 0.3 },
   { id: 'qwen', test: /qwen/i, input: 1.2, output: 6, cacheRead: 0.24, cacheWrite: 1.2 },
   { id: 'step', test: /step[-_]?\d/i, input: 0.5, output: 2, cacheRead: 0.05, cacheWrite: 0.5 },
-  { id: 'nex', test: /nex/i, input: 0.2, output: 0.6, cacheRead: 0.02, cacheWrite: 0.2 },
   { id: 'moss', test: /moss/i, input: 0.2, output: 0.6, cacheRead: 0.02, cacheWrite: 0.2 },
 ]
 
@@ -106,6 +105,13 @@ const BUILTIN_LIST_PRICES = {
  * Anthropic's official input/output/cache ratios gives a 3.393301× multiplier
  * and the rates below. It is reference-only and never cash spend.
  */
+/**
+ * NEX is metered by characters, not tokens: ¥1.20 per 10,000 characters.
+ * Until the provider reports a character count, use the output-token count as
+ * an explicitly estimated proxy; the UI marks it as a character reference.
+ */
+const NEX_CHAR_PRICE_CNY_PER_10K = 1.2
+
 const CALIBRATED_PRICES = {
   'claude-sonnet-5-5': {
     input: 10.179903,
@@ -444,6 +450,19 @@ export function resolvePrice(provider, model, settings, at = Date.now()) {
   }
   const list = builtinListPrice(model, settings)
   if (list !== null) return list
+  if (/^nex(?:[-_.]|$)/i.test(model)) {
+    return {
+      unit: 'cnyPer10kChars',
+      per10kChars: NEX_CHAR_PRICE_CNY_PER_10K,
+      cnyPerUsd: nonNegative(settings.exchangeRate) > 0 ? nonNegative(settings.exchangeRate) : 6.7132,
+      source: 'nex-chars',
+      estimated: true,
+      official: false,
+      cashEligible: false,
+      original: { currency: 'CNY', per10kChars: NEX_CHAR_PRICE_CNY_PER_10K },
+      key: 'nex-chars',
+    }
+  }
   const family = FAMILY_PRICES.find(entry => entry.test.test(model))
   if (family !== undefined) {
     const { id, test: _test, ...price } = family
@@ -479,6 +498,11 @@ export function usageTokens(usage) {
 /** USD cost for one usage value under a resolved price. */
 export function usageCostUsd(usage, price) {
   if (price === null || price === undefined) return 0
+  if (price.unit === 'cnyPer10kChars') {
+    const characters = nonNegative(usage?.c) || nonNegative(usage?.chars) || nonNegative(usage?.o)
+    const cny = (characters / 10_000) * nonNegative(price.per10kChars)
+    return cny / (nonNegative(price.cnyPerUsd) > 0 ? nonNegative(price.cnyPerUsd) : 6.7132)
+  }
   const input = nonNegative(usage?.i)
   const output = nonNegative(usage?.o)
   const cacheRead = nonNegative(usage?.r)
@@ -895,6 +919,8 @@ export class UsageStore {
         w: Math.floor(nonNegative(usage.w)),
         rt: Math.floor(nonNegative(usage.rt)),
         total: Math.floor(nonNegative(usage.total)),
+        ...(nonNegative(usage.c) > 0 ? { c: Math.floor(nonNegative(usage.c)) } : {}),
+        ...(nonNegative(usage.chars) > 0 ? { chars: Math.floor(nonNegative(usage.chars)) } : {}),
       },
       turn: Math.max(0, Math.floor(finiteNumber(record.turn))),
       step: Math.max(0, Math.floor(finiteNumber(record.step))),

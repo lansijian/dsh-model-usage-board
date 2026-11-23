@@ -67,6 +67,8 @@ window.__ModuleLoader__.load({
       priceOfficialPeak: '官方峰谷价',
       priceListReference: '官方按量参考',
       priceFamilyEstimate: '家族估算',
+      priceNexChars: '按字符参考',
+      nexCharsHint: 'NEX 按 ¥1.20 / 万字符估算；优先使用 usage.c，缺失时以输出 token 近似字符数，不是官方账单。',
       priceCustom: '自定义价',
       platformCalibrated: '平台校准',
       calibrationHint: '按平台账单反推的参考单价，不是官方牌价。',
@@ -251,6 +253,8 @@ window.__ModuleLoader__.load({
       priceOfficialPeak: 'Official peak/off-peak',
       priceListReference: 'Official list reference',
       priceFamilyEstimate: 'Family estimate',
+      priceNexChars: 'Per-character reference',
+      nexCharsHint: 'NEX is estimated at ¥1.20 per 10k characters; usage.c is preferred, otherwise output tokens are used as a proxy. Not an official invoice.',
       priceCustom: 'Custom price',
       platformCalibrated: 'Platform calibrated',
       calibrationHint: 'Reference rate inferred from a platform bill; not an official list price.',
@@ -1199,6 +1203,7 @@ window.__ModuleLoader__.load({
       if (row.billing === 'credits') return { text: t('credits'), title: t('creditsHint'), className: 'mub-badge' }
       if (row.billing === 'unpriced') {
         if (row.price?.source === 'list') return { text: t('priceListReference'), title: t('referenceHint'), className: 'mub-badge' }
+        if (row.price?.source === 'nex-chars') return { text: t('priceNexChars'), title: t('nexCharsHint'), className: 'mub-badge' }
         if (row.price) return { text: t('priceFamilyEstimate'), title: t('estimatedHint'), className: 'mub-badge' }
         return { text: t('unpriced'), title: t('priceHint'), className: 'mub-badge mub-warn' }
       }
@@ -1212,6 +1217,7 @@ window.__ModuleLoader__.load({
         return { text: t('platformCalibrated'), title: row.price?.note ?? t('calibrationHint'), className: 'mub-badge' }
       }
       if (row.price?.source === 'list') return { text: t('priceListReference'), title: t('referenceHint'), className: 'mub-badge' }
+      if (row.price?.source === 'nex-chars') return { text: t('priceNexChars'), title: t('nexCharsHint'), className: 'mub-badge' }
       if (row.estimated) return { text: t('priceFamilyEstimate'), title: t('estimatedHint'), className: 'mub-badge' }
       if (row.price?.source === 'route' || row.price?.source === 'model') return { text: t('priceCustom'), title: t('priceHint'), className: 'mub-badge' }
       return null
@@ -1221,7 +1227,7 @@ window.__ModuleLoader__.load({
       if (summary.costBasis === 'cash') {
         if (row.billing === 'plan') return t('plan')
         if (row.billing === 'credits') return t('credits')
-        if (row.billing === 'unpriced') return row.price ? t('priceFamilyEstimate') : '—'
+        if (row.billing === 'unpriced') return row.price?.source === 'nex-chars' ? t('priceNexChars') : row.price ? t('priceFamilyEstimate') : '—'
         if (row.price === null || row.price === undefined) return '—'
         if (row.billing === 'payg' && row.price?.cashEligible !== true) return t('priceFamilyEstimate')
       }

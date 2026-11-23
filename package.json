@@ -1,6 +1,6 @@
 {
   "name": "dsh-model-usage-board",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "type": "module",
   "description": "A live per-model token, spend, and quota board for DeepSeek Harness, with a time-of-day 3D sky.",
