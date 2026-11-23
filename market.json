@@ -1,23 +1,44 @@
-﻿{
+{
   "format": 1,
-  "title": { "en": "Model usage board", "zh": "模型用量看板" },
+  "title": {
+    "en": "Model usage board",
+    "zh": "模型用量看板"
+  },
   "description": {
     "en": "A live per-model token, spend, and quota board with a time-of-day 3D sky.",
     "zh": "按模型记录 Token、实际支出、总支出和额度的实时看板，带随时间变化的 3D 天空。"
   },
   "metadata": {
     "categories": {
-      "monitoring": { "title": { "en": "Monitoring", "zh": "监控" } }
+      "monitoring": {
+        "title": {
+          "en": "Monitoring",
+          "zh": "监控"
+        }
+      }
     },
     "labels": {
-      "local-first": { "title": { "en": "Local-first", "zh": "本地优先" } },
-      "visual": { "title": { "en": "Visual", "zh": "视觉" } }
+      "local-first": {
+        "title": {
+          "en": "Local-first",
+          "zh": "本地优先"
+        }
+      },
+      "visual": {
+        "title": {
+          "en": "Visual",
+          "zh": "视觉"
+        }
+      }
     }
   },
   "plugins": [
     {
       "name": "dsh-model-usage-board",
-      "title": { "en": "Model usage board", "zh": "模型用量看板" },
+      "title": {
+        "en": "Model usage board",
+        "zh": "模型用量看板"
+      },
       "description": {
         "en": "A live per-model token, spend, and quota board with a time-of-day 3D sky.",
         "zh": "按模型记录 Token、实际支出、总支出和额度的实时看板，带随时间变化的 3D 天空。"
@@ -31,8 +52,17 @@
       "icon": "https://raw.githubusercontent.com/lansijian/dsh-model-usage-board/main/icon.svg",
       "metadata": {
         "category": "monitoring",
-        "labels": ["local-first", "visual"],
-        "keywords": ["token", "cost", "usage", "quota", "blender"]
+        "labels": [
+          "local-first",
+          "visual"
+        ],
+        "keywords": [
+          "token",
+          "cost",
+          "usage",
+          "quota",
+          "blender"
+        ]
       },
       "versions": [
         {
@@ -41,10 +71,12 @@
           "source": {
             "type": "git",
             "url": "https://github.com/lansijian/dsh-model-usage-board",
-            "commit": "PLACEHOLDER_COMMIT",
+            "commit": "446e4d06cec3d1086351cfb8bf09856f38529fff",
             "path": "."
           },
-          "engines": { "dsh": ">=0.2.0" }
+          "engines": {
+            "dsh": ">=0.2.0"
+          }
         }
       ]
     }
