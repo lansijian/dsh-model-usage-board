@@ -27,7 +27,7 @@ window.__ModuleLoader__.load({
       phaseAfternoon: '下午',
       phaseDusk: '傍晚',
       phaseNight: '晚上',
-      phaseDawn: '凌晨',
+      phaseDawn: '朝霞',
       autoPhase: '自动时段',
       phaseHint: '按本地时间整块切换背景、文字、图表和边框颜色；到点自动更新。',
       offline: '离线',
@@ -162,7 +162,7 @@ window.__ModuleLoader__.load({
       styleMatrix: '矩阵终端',
       styleAurora: '深空极光',
       stylePrism: '虹彩棱镜',
-      styleHint: '跟随时间会按白天 / 下午 / 傍晚 / 晚上 / 凌晨五套整主题自动切换；其他风格保持固定。',
+      styleHint: '跟随时间会按白天 / 下午 / 傍晚 / 晚上银河 / 朝霞五套整主题自动切换；其他风格保持固定。',
       showBoard: '显示悬浮看板',
       hideBoard: '隐藏悬浮看板',
       boardHidden: '看板已隐藏',
@@ -346,7 +346,7 @@ window.__ModuleLoader__.load({
       styleMatrix: 'Matrix terminal',
       styleAurora: 'Deep aurora',
       stylePrism: 'Prism',
-      styleHint: 'Auto switches five full palettes: day / afternoon / dusk / night / dawn. Fixed styles stay fixed.',
+      styleHint: 'Auto switches five full palettes: day / afternoon / sunset / Milky Way night / dawn glow. Fixed styles stay fixed.',
       showBoard: 'Show floating board',
       hideBoard: 'Hide floating board',
       boardHidden: 'Board hidden',
@@ -645,8 +645,8 @@ window.__ModuleLoader__.load({
       .mub-style-auto.mub-phase-day { --scene-sun-x: 84%; --scene-sun-y: 28%; --scene-sun-size: 84px; --scene-sun-core: #ffe8ad; --scene-sun-core-opacity: .82; --scene-glow: rgba(255,210,130,.52); --scene-glow-size: 120px; --scene-rays-opacity: .26; --scene-light-opacity: .32; --scene-ray: rgba(255,232,180,.4); --scene-moon-opacity: 0; --scene-stars-opacity: 0; --scene-galaxy-opacity: 0; --scene-cloud-opacity: .42; --scene-cloud-color: linear-gradient(90deg, transparent, rgba(165,205,255,.7), transparent); --scene-cloud-color-2: linear-gradient(90deg, transparent, rgba(255,238,215,.85), transparent); --scene-cloud-color-3: linear-gradient(90deg, transparent, rgba(255,246,225,.65), transparent); --scene-horizon: rgba(255,232,185,.64); --scene-horizon-opacity: .58; --scene-veil: rgba(255,255,255,.14); --scene-haze: rgba(255,225,170,.3); --scene-haze-x: 78%; --scene-haze-y: 24%; --scene-cloud-tint: rgba(255,255,255,.94); --scene-cloud-tint-2: rgba(216,232,250,.86); --scene-cloud-tint-3: rgba(255,242,218,.82); --scene-cloud-blend: normal; --scene-cloud-filter: brightness(1.08) saturate(.62) contrast(.94); --scene-vignette: .06; --scene-meteor-opacity: 0; --scene-sky: linear-gradient(180deg, rgba(120,180,245,.24), rgba(210,232,255,.10) 48%, transparent 72%); }
       .mub-style-auto.mub-phase-afternoon { --scene-sun-x: 84%; --scene-sun-y: 36%; --scene-sun-size: 104px; --scene-sun-core: #ffd08a; --scene-sun-core-opacity: .46; --scene-glow: rgba(255,146,58,.62); --scene-glow-size: 150px; --scene-rays-opacity: .4; --scene-light-opacity: .42; --scene-ray: rgba(255,190,110,.48); --scene-moon-opacity: 0; --scene-stars-opacity: 0; --scene-galaxy-opacity: 0; --scene-cloud-opacity: .60; --scene-cloud-color: linear-gradient(90deg, transparent, rgba(255,220,170,.9), transparent); --scene-cloud-color-2: linear-gradient(90deg, transparent, rgba(255,170,95,.68), transparent); --scene-cloud-color-3: linear-gradient(90deg, transparent, rgba(255,145,75,.6), transparent); --scene-horizon: rgba(255,174,95,.76); --scene-horizon-opacity: .66; --scene-veil: rgba(255,239,210,.12); --scene-haze: rgba(255,180,110,.34); --scene-haze-x: 76%; --scene-haze-y: 32%; --scene-cloud-tint: rgba(255,238,208,.95); --scene-cloud-tint-2: rgba(255,196,150,.86); --scene-cloud-tint-3: rgba(255,172,118,.8); --scene-cloud-blend: normal; --scene-cloud-filter: sepia(.25) saturate(1.2) hue-rotate(-8deg) brightness(1.02); --scene-vignette: .08; --scene-meteor-opacity: 0; --scene-sky: linear-gradient(180deg, rgba(255,214,160,.20), rgba(255,235,210,.08) 52%, transparent 74%); }
       .mub-style-auto.mub-phase-dusk { --scene-sun-x: 68%; --scene-sun-y: 50%; --scene-sun-size: 132px; --scene-sun-core: #ffb36b; --scene-sun-core-opacity: .12; --scene-glow: rgba(255,78,68,.72); --scene-glow-size: 190px; --scene-rays-opacity: .6; --scene-light-opacity: .18; --scene-ray: rgba(255,130,90,.58); --scene-moon-opacity: .05; --scene-moon-x: 86%; --scene-moon-y: 22%; --scene-stars-opacity: .18; --scene-galaxy-opacity: .06; --scene-cloud-opacity: .72; --scene-cloud-color: linear-gradient(90deg, transparent, rgba(255,68,48,.92), rgba(255,155,72,.72), transparent); --scene-cloud-color-2: linear-gradient(90deg, transparent, rgba(255,78,112,.78), rgba(132,72,225,.58), transparent); --scene-cloud-color-3: linear-gradient(90deg, transparent, rgba(255,54,58,.8), transparent); --scene-horizon: rgba(255,110,72,.95); --scene-horizon-opacity: .9; --scene-veil: rgba(40,12,34,.08); --scene-haze: rgba(255,100,68,.42); --scene-haze-x: 62%; --scene-haze-y: 44%; --scene-cloud-tint: rgba(255,132,92,.96); --scene-cloud-tint-2: rgba(216,105,166,.86); --scene-cloud-tint-3: rgba(255,90,80,.9); --scene-cloud-blend: screen; --scene-cloud-filter: sepia(.8) saturate(2.4) hue-rotate(-18deg) brightness(.82); --scene-vignette: .26; --scene-meteor-opacity: .08; }
-      .mub-style-auto.mub-phase-night { --scene-sun-opacity: 0; --scene-rays-opacity: 0; --scene-light-opacity: .04; --scene-moon-opacity: 1; --scene-moon-x: 83%; --scene-moon-y: 28%; --scene-moon-size: 54px; --scene-moon-glow: rgba(158,190,255,.5); --scene-stars-opacity: .65; --scene-galaxy-opacity: .32; --scene-meteor-opacity: .42; --scene-cloud-opacity: .08; --scene-cloud-color: linear-gradient(90deg, transparent, rgba(47,78,125,.55), transparent); --scene-cloud-color-2: linear-gradient(90deg, transparent, rgba(72,102,160,.36), transparent); --scene-cloud-color-3: linear-gradient(90deg, transparent, rgba(35,60,105,.4), transparent); --scene-horizon: rgba(96,144,235,.6); --scene-horizon-opacity: .58; --scene-veil: rgba(4,9,18,.02); --scene-haze: rgba(92,138,228,.24); --scene-haze-x: 82%; --scene-haze-y: 28%; --scene-cloud-tint: rgba(55,80,130,.58); --scene-cloud-tint-2: rgba(38,60,100,.46); --scene-cloud-tint-3: rgba(44,70,116,.5); --scene-cloud-blend: screen; --scene-cloud-filter: sepia(.55) saturate(.6) hue-rotate(180deg) brightness(.35); --scene-vignette: .32; }
-      .mub-style-auto.mub-phase-dawn { --scene-sun-opacity: 0; --scene-rays-opacity: 0; --scene-light-opacity: .04; --scene-moon-opacity: .1; --scene-moon-x: 86%; --scene-moon-y: 24%; --scene-moon-size: 40px; --scene-moon-glow: rgba(150,190,255,.18); --scene-stars-opacity: .52; --scene-galaxy-opacity: .32; --scene-cloud-opacity: .40; --scene-cloud-color: linear-gradient(90deg, transparent, rgba(255,150,165,.72), transparent); --scene-cloud-color-2: linear-gradient(90deg, transparent, rgba(95,215,205,.62), transparent); --scene-cloud-color-3: linear-gradient(90deg, transparent, rgba(255,135,155,.55), transparent); --scene-horizon: rgba(94,228,214,.86); --scene-horizon-opacity: .82; --scene-veil: rgba(3,12,18,.05); --scene-haze: rgba(78,218,206,.26); --scene-haze-x: 24%; --scene-haze-y: 62%; --scene-cloud-tint: rgba(255,170,190,.76); --scene-cloud-tint-2: rgba(90,200,205,.66); --scene-cloud-tint-3: rgba(255,145,165,.6); --scene-cloud-blend: screen; --scene-cloud-filter: sepia(.55) saturate(1.4) hue-rotate(-8deg) brightness(.72); --scene-vignette: .28; --scene-meteor-opacity: .95; }
+      .mub-style-auto.mub-phase-night { --scene-sun-opacity: 0; --scene-rays-opacity: 0; --scene-light-opacity: .04; --scene-moon-opacity: 0; --scene-moon-x: 83%; --scene-moon-y: 28%; --scene-moon-size: 54px; --scene-moon-glow: rgba(158,190,255,.5); --scene-stars-opacity: .82; --scene-galaxy-opacity: .46; --scene-meteor-opacity: .58; --scene-cloud-opacity: .08; --scene-cloud-color: linear-gradient(90deg, transparent, rgba(47,78,125,.55), transparent); --scene-cloud-color-2: linear-gradient(90deg, transparent, rgba(72,102,160,.36), transparent); --scene-cloud-color-3: linear-gradient(90deg, transparent, rgba(35,60,105,.4), transparent); --scene-horizon: rgba(96,144,235,.6); --scene-horizon-opacity: .58; --scene-veil: rgba(4,9,18,.02); --scene-haze: rgba(92,138,228,.24); --scene-haze-x: 82%; --scene-haze-y: 28%; --scene-cloud-tint: rgba(55,80,130,.58); --scene-cloud-tint-2: rgba(38,60,100,.46); --scene-cloud-tint-3: rgba(44,70,116,.5); --scene-cloud-blend: screen; --scene-cloud-filter: sepia(.55) saturate(.6) hue-rotate(180deg) brightness(.35); --scene-vignette: .32; }
+      .mub-style-auto.mub-phase-dawn { --scene-sun-opacity: 0; --scene-rays-opacity: 0; --scene-light-opacity: .04; --scene-moon-opacity: 0; --scene-moon-x: 86%; --scene-moon-y: 24%; --scene-moon-size: 40px; --scene-moon-glow: rgba(150,190,255,.18); --scene-stars-opacity: .42; --scene-galaxy-opacity: .24; --scene-cloud-opacity: .40; --scene-cloud-color: linear-gradient(90deg, transparent, rgba(255,150,165,.72), transparent); --scene-cloud-color-2: linear-gradient(90deg, transparent, rgba(95,215,205,.62), transparent); --scene-cloud-color-3: linear-gradient(90deg, transparent, rgba(255,135,155,.55), transparent); --scene-horizon: rgba(94,228,214,.86); --scene-horizon-opacity: .82; --scene-veil: rgba(3,12,18,.05); --scene-haze: rgba(78,218,206,.26); --scene-haze-x: 24%; --scene-haze-y: 62%; --scene-cloud-tint: rgba(255,170,190,.76); --scene-cloud-tint-2: rgba(90,200,205,.66); --scene-cloud-tint-3: rgba(255,145,165,.6); --scene-cloud-blend: screen; --scene-cloud-filter: sepia(.55) saturate(1.4) hue-rotate(-8deg) brightness(.72); --scene-vignette: .28; --scene-meteor-opacity: .30; }
       .mub-scene-haze { inset: -20%; background: radial-gradient(62% 52% at var(--scene-haze-x, 72%) var(--scene-haze-y, 26%), var(--scene-haze, rgba(255,210,150,.25)), transparent 72%); filter: blur(24px); mix-blend-mode: screen; opacity: .72; animation: mub-haze-drift 32s ease-in-out infinite alternate; }
       .mub-scene-vignette { inset: 0; background: radial-gradient(ellipse at 50% 42%, transparent 38%, rgba(0,0,0,.9) 100%); opacity: var(--scene-vignette, .18); mix-blend-mode: multiply; }
       .mub-scene-grain { inset: 0; background-image: url('/dsh-usage/api/space/grain.webp'); background-size: 128px 128px; opacity: .055; mix-blend-mode: overlay; animation: mub-grain-jitter 1.4s steps(3) infinite; }
@@ -1781,30 +1781,31 @@ window.__ModuleLoader__.load({
     }
 
     const PHASES = [
-      { id: 'day', from: 6, to: 12, range: '06–12' },
+      { id: 'day', from: 7, to: 12, range: '07–12' },
       { id: 'afternoon', from: 12, to: 17, range: '12–17' },
-      { id: 'dusk', from: 17, to: 20, range: '17–20' },
-      { id: 'night', from: 20, to: 24, range: '20–24' },
-      { id: 'dawn', from: 0, to: 6, range: '00–06' },
+      { id: 'dusk', from: 17, to: 19, range: '17–19' },
+      { id: 'night', from: 19, to: 29, range: '19–05' },
+      { id: 'dawn', from: 5, to: 7, range: '05–07' },
     ]
 
     function phaseOfDate(date = new Date()) {
       const hour = date.getHours()
-      if (hour >= 6 && hour < 12) return 'day'
+      if (hour >= 7 && hour < 12) return 'day'
       if (hour >= 12 && hour < 17) return 'afternoon'
-      if (hour >= 17 && hour < 20) return 'dusk'
-      if (hour >= 20) return 'night'
+      if (hour >= 17 && hour < 19) return 'dusk'
+      if (hour >= 19 || hour < 5) return 'night'
       return 'dawn'
     }
 
     function skyPath(phase, date = new Date()) {
-      const hour = date.getHours() + date.getMinutes() / 60
+      let hour = date.getHours() + date.getMinutes() / 60
+      if (phase === 'night' && hour < 5) hour += 24
       const span = PHASES.find(item => item.id === phase) || PHASES[0]
       const t = Math.max(0, Math.min(1, (hour - span.from) / Math.max(1e-6, span.to - span.from)))
       const mix = (from, to) => from + (to - from) * t
       if (phase === 'day') return { sunX: mix(58, 84), sunY: mix(40, 28), moonX: 82, moonY: 18 }
       if (phase === 'afternoon') return { sunX: mix(84, 70), sunY: mix(30, 46), moonX: 84, moonY: 20 }
-      if (phase === 'dusk') return { sunX: mix(70, 60), sunY: mix(46, 50), moonX: 86, moonY: 20 }
+      if (phase === 'dusk') return { sunX: mix(70, 58), sunY: mix(46, 52), moonX: 86, moonY: 20 }
       if (phase === 'night') return { sunX: 60, sunY: 64, moonX: mix(84, 74), moonY: mix(26, 22) }
       return { sunX: 60, sunY: 64, moonX: mix(78, 86), moonY: mix(24, 30) }
     }

@@ -271,10 +271,10 @@ export function widgetHtml({ theme = 'light', title = '模型用量 · Model usa
   document.documentElement.setAttribute('data-style', effectiveStyle);
   function phaseNow() {
     var h = new Date().getHours();
-    if (h >= 6 && h < 12) return 'day';
+    if (h >= 7 && h < 12) return 'day';
     if (h >= 12 && h < 17) return 'afternoon';
-    if (h >= 17 && h < 20) return 'dusk';
-    if (h >= 20) return 'night';
+    if (h >= 17 && h < 19) return 'dusk';
+    if (h >= 19 || h < 5) return 'night';
     return 'dawn';
   }
   function applyPhase() { document.documentElement.setAttribute('data-phase', phaseNow()); }

@@ -154,10 +154,10 @@ defined in USD.
   dot-matrix without full monospace), `深空极光` (violet/teal aurora), and
   `虹彩棱镜` (holographic rainbow rim).
   `跟随时间` switches five full palettes and scenes:
-  **白天 06–12** (sunlit ivory/sky), **下午 12–17** (amber sun and warm haze),
-  **傍晚 17–20** (fiery clouds, coral sun, violet sky),
-  **晚上 20–24** (moonlight, stars, galaxy band),
-  **凌晨 00–06** (pre-dawn teal/rose朝霞). Fixed styles stay fixed.
+  **白天 07–12** (sunlit ivory/sky), **下午 12–17** (amber sun and warm haze),
+  **傍晚 17–19** (fiery clouds, coral sun, violet sky),
+  **晚上 19–05** (pure Milky Way, stars and meteors; no moon),
+  **朝霞 05–07** (rose/teal dawn glow). Fixed styles stay fixed.
   The auto scene includes a positioned sun, rays, clouds, horizon, moon,
   stars, and galaxy; it is CSS-only and disabled by `prefers-reduced-motion`.
 - **Native floating window**: the header desktop button opens a frameless WPF
