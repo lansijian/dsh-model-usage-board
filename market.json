@@ -66,8 +66,8 @@
       },
       "versions": [
         {
-          "version": "1.0.1",
-          "publishTimestamp": 1795441652,
+          "version": "1.0.2",
+          "publishTimestamp": 1795441752,
           "source": {
             "type": "git",
             "url": "https://github.com/lansijian/dsh-model-usage-board",

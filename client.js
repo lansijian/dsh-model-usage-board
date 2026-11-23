@@ -1855,6 +1855,8 @@ window.__ModuleLoader__.load({
         return () => clearInterval(timer)
       }, [])
       const sky = skyPath(phase, now)
+      const nightHour = now.getHours()
+      const eveningMoon = phase === 'night' && nightHour >= 19 && nightHour < 24
       return h('div', {
         className: 'mub-scene',
         'aria-hidden': true,
@@ -1863,6 +1865,12 @@ window.__ModuleLoader__.load({
           '--scene-sun-y': `${sky.sunY}%`,
           '--scene-moon-x': `${sky.moonX}%`,
           '--scene-moon-y': `${sky.moonY}%`,
+          ...(phase === 'night' ? {
+            '--scene-moon-opacity': eveningMoon ? '1' : '0',
+            '--scene-galaxy-opacity': eveningMoon ? '.30' : '.52',
+            '--scene-stars-opacity': eveningMoon ? '.62' : '.82',
+            '--scene-meteor-opacity': eveningMoon ? '.30' : '.58',
+          } : {}),
         },
       },
         h('i', { className: 'mub-scene-galaxy' }),
