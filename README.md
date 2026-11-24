@@ -1,5 +1,7 @@
 # Model usage board
 
+[![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-zh.svg)](https://dsh.market/)
+
 A floating, draggable board that records every completed model call in DeepSeek
 Harness, aggregates tokens and cost per model, and lets you inspect day, week,
 month, quarter, year, and custom ranges.
