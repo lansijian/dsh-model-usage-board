@@ -1231,7 +1231,9 @@ window.__ModuleLoader__.load({
         if (row.billing === 'credits') return t('credits')
         if (row.billing === 'unpriced') return row.price?.source === 'nex-chars' ? t('priceNexChars') : row.price ? t('priceFamilyEstimate') : '—'
         if (row.price === null || row.price === undefined) return '—'
-        if (row.billing === 'payg' && row.price?.cashEligible !== true) return t('priceFamilyEstimate')
+        if (row.billing === 'payg' && row.price?.cashEligible !== true) {
+          return row.price?.source === 'list' ? t('priceListReference') : t('priceFamilyEstimate')
+        }
       }
       return fmtMoney(row.cost ?? row.cashCost ?? 0, summary.currency)
     }
