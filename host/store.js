@@ -237,6 +237,8 @@ const DISPLAY_NAMES = new Map([
   ['qwen4-max-preview', 'Qwen4 Max Preview'],
   ['step-5-preview', 'StepFun step-5-preview'],
   ['nex-n2.6', 'NEX N2.6'],
+  ['Hy4-flash', 'Hunyuan 4 Flash'],
+  ['hy4-flash', 'Hunyuan 4 Flash'],
   ['MiMo-V2.6-Flash', 'MiMo V2.6 Flash'],
   ['mimo-v2.6-flash', 'MiMo V2.6 Flash'],
   ['mimo-v2.6-pro', 'MiMo V2.6 Pro'],

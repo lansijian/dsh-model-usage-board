@@ -1043,7 +1043,7 @@ window.__ModuleLoader__.load({
       if (text.includes('llama') || text.includes('meta-')) return 'meta'
       if (text.includes('mistral') || text.includes('mixtral') || text.includes('codestral')) return 'mistral'
       if (text.includes('doubao') || text.includes('bytedance') || text.includes('seed-')) return 'doubao'
-      if (text.includes('hunyuan') || text.includes('tencent')) return 'hunyuan'
+      if (text.includes('hunyuan') || text.includes('tencent') || /(^|[\s/_-])hy\d/.test(text)) return 'hunyuan'
       if (text.includes('ernie') || text.includes('wenxin') || text.includes('baidu')) return 'baidu'
       if (text.includes('cohere') || text.includes('command-r')) return 'cohere'
       if (text.includes('perplexity') || text.includes('sonar')) return 'perplexity'
