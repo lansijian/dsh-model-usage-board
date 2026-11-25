@@ -97,6 +97,10 @@ const BUILTIN_LIST_PRICES = {
   'step-5-preview': { currency: 'CNY', input: 7, output: 20, cacheRead: 0.7, cacheWrite: 7 },
   'step-3.7-flash': { currency: 'CNY', input: 1.35, output: 8.1, cacheRead: 0.27, cacheWrite: 1.35 },
   'step-3.5-flash': { currency: 'CNY', input: 0.7, output: 2.1, cacheRead: 0.14, cacheWrite: 0.7 },
+  'MiMo-V2.6-Flash': { currency: 'CNY', input: 1, output: 2, cacheRead: 0.02, cacheWrite: 1 },
+  'mimo-v2.6-flash': { currency: 'CNY', input: 1, output: 2, cacheRead: 0.02, cacheWrite: 1 },
+  'mimo-v2.6-pro': { currency: 'CNY', input: 3, output: 6, cacheRead: 0.025, cacheWrite: 3 },
+  'mimo-v2.6-pro-ultraspeed': { currency: 'CNY', input: 30, output: 60, cacheRead: 0.25, cacheWrite: 30 },
 }
 
 /**
@@ -195,7 +199,7 @@ function deepSeekPrice(model, settings, at) {
 }
 
 function builtinListPrice(model, settings) {
-  const entry = BUILTIN_LIST_PRICES[model]
+  const entry = BUILTIN_LIST_PRICES[model] ?? BUILTIN_LIST_PRICES[model.toLowerCase()]
   if (entry === undefined) return null
   const rate = settings.exchangeRate > 0 ? settings.exchangeRate : 7.1
   const factor = entry.currency === 'CNY' ? 1 / rate : 1
@@ -233,6 +237,10 @@ const DISPLAY_NAMES = new Map([
   ['qwen4-max-preview', 'Qwen4 Max Preview'],
   ['step-5-preview', 'StepFun step-5-preview'],
   ['nex-n2.6', 'NEX N2.6'],
+  ['MiMo-V2.6-Flash', 'MiMo V2.6 Flash'],
+  ['mimo-v2.6-flash', 'MiMo V2.6 Flash'],
+  ['mimo-v2.6-pro', 'MiMo V2.6 Pro'],
+  ['mimo-v2.6-pro-ultraspeed', 'MiMo V2.6 Pro UltraSpeed'],
   ['nex-n2.6-2026-11-05', 'NEX N2.6 (2026-11-05)'],
 ])
 

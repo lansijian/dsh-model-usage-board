@@ -91,6 +91,7 @@ Plan and credit models are audited against their public list rates:
 | Claude Opus 5.5 (gateway credits) | $4 / 1M | $20 / 1M | $0.4 / 1M | credits cash ¥0; list reference |
 | Claude Sonnet 5.5 (gateway credits) | $10.1799 / 1M | $50.8995 / 1M | $1.0180 / 1M | calibrated reference; credits cash ¥0 |
 | NEX N2.6 (configured character reference) | — | ¥1.20 / 10k characters | — | `usage.c` preferred; output tokens used only when no character count exists |
+| MiMo V2.6 Flash (`amd` route) | ¥1 / 1M | ¥2 / 1M | ¥0.02 / 1M | official list reference; no cash until the route is marked paid |
 
 Qwen Token Plan personal tiers (list): Lite ¥39/month (20k credits),
 Essential ¥79 (45k), Standard ¥139 (80k), Pro ¥312 (200k). The first-purchase
@@ -106,7 +107,8 @@ separately. Sources:
 [Qwen4-Max price details](https://developer.aliyun.com/article/1784343),
 [StepFun pricing](https://platform.stepfun.com/docs/zh/guides/pricing/details),
 [Anthropic pricing](https://platform.claude.com/docs/en/about-claude/pricing),
-[MOSS model pricing](https://platform.mosi.cn/docs/models/overview).
+[MOSS model pricing](https://platform.mosi.cn/docs/models/overview),
+[MiMo V2.6 Flash pricing](https://mimo.mi.com/models/en-US/mimo-v2.6-flash).
 
 Reference totals are deliberately labelled `按量参考` on the board and in the
 desktop window. They answer “what would these tokens cost at the public
