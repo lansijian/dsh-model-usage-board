@@ -1684,7 +1684,7 @@ window.__ModuleLoader__.load({
               type: 'button', className: 'mub-today', title: t('today'),
               onClick: () => {
                 if (effectivePeriod === 'custom') setPeriod('day')
-                setAnchor(summary?.period?.todayKey ?? null)
+                setAnchor(null)
               },
             }, t('today')),
           ),
@@ -2180,7 +2180,7 @@ window.__ModuleLoader__.load({
                     type: 'button', className: 'mub-today', title: t('today'),
                     onClick: () => {
                       if (effectivePeriod === 'custom') setPeriod('day')
-                      setAnchor(summary?.period?.todayKey ?? null)
+                      setAnchor(null)
                     },
                   }, t('today')),
                 ),
@@ -2342,7 +2342,6 @@ window.__ModuleLoader__.load({
             if (!alive) return
             setSummary(data)
             setScan(data.scan)
-            if (anchor === null) setAnchor(data.period.startKey)
             if (period === 'custom' && from === null && to === null) {
               setFrom(data.period.startKey)
               setTo(addDaysKey(data.period.endKey, -1))
