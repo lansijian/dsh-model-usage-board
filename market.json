@@ -71,7 +71,7 @@
           "source": {
             "type": "git",
             "url": "https://github.com/lansijian/dsh-model-usage-board",
-            "commit": "06450e291773685e4a1b3b85df505571d85d02fc",
+            "commit": "da6a013c90e4387adc95faf1b28458382638a093",
             "path": "."
           },
           "engines": {
