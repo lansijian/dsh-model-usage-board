@@ -101,6 +101,9 @@ const BUILTIN_LIST_PRICES = {
   'mimo-v2.6-flash': { currency: 'CNY', input: 1, output: 2, cacheRead: 0.02, cacheWrite: 1 },
   'mimo-v2.6-pro': { currency: 'CNY', input: 3, output: 6, cacheRead: 0.025, cacheWrite: 3 },
   'mimo-v2.6-pro-ultraspeed': { currency: 'CNY', input: 30, output: 60, cacheRead: 0.25, cacheWrite: 30 },
+  'Hy4-flash': { currency: 'CNY', input: 0.5, output: 2, cacheRead: 0.02, cacheWrite: 0.5 },
+  'hy4-flash': { currency: 'CNY', input: 0.5, output: 2, cacheRead: 0.02, cacheWrite: 0.5 },
+  'Hy4': { currency: 'CNY', input: 6, output: 18, cacheRead: 0.3, cacheWrite: 6 },
 }
 
 /**
