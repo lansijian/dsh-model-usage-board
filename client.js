@@ -1011,6 +1011,7 @@ window.__ModuleLoader__.load({
       claude: { label: 'Anthropic · Claude' },
       openai: { label: 'OpenAI' },
       mimo: { label: 'Xiaomi · MiMo' },
+      dots: { label: 'Dots · 点点' },
       moss: { label: 'MOSS · NEX' },
       gemini: { label: 'Google · Gemini' },
       grok: { label: 'xAI · Grok' },
@@ -1034,6 +1035,7 @@ window.__ModuleLoader__.load({
       if (text.includes('deepseek')) return 'deepseek'
       if (text.includes('step')) return 'stepfun'
       if (text.includes('mimo') || text.includes('xiaomi')) return 'mimo'
+      if (text.includes('dots') || text.includes('xiaohongshu')) return 'dots'
       if (text.includes('moss') || text.includes('nex')) return 'moss'
       if (text.includes('gemini') || text.includes('google') || text.includes('bard') || text.includes('palm')) return 'gemini'
       if (text.includes('grok') || text.includes('xai')) return 'grok'

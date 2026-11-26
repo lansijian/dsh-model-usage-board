@@ -119,6 +119,14 @@ const BUILTIN_LIST_PRICES = {
  */
 const NEX_CHAR_PRICE_CNY_PER_10K = 1.2
 
+/** Dots3 Note Prev official API list, USD per 1M tokens. */
+const DOTS3_NOTE_PREV_PRICE = {
+  input: 0.14,
+  output: 0.28,
+  cacheRead: 0.14,
+  cacheWrite: 0.14,
+}
+
 const CALIBRATED_PRICES = {
   'claude-sonnet-5-5': {
     input: 10.179903,
@@ -241,6 +249,7 @@ const DISPLAY_NAMES = new Map([
   ['step-5-preview', 'StepFun step-5-preview'],
   ['nex-n2.6', 'NEX N2.6'],
   ['Hy4-flash', 'Hunyuan 4 Flash'],
+  ['dots3-note-prev', 'Dots3 Note Prev'],
   ['hy4-flash', 'Hunyuan 4 Flash'],
   ['MiMo-V2.6-Flash', 'MiMo V2.6 Flash'],
   ['mimo-v2.6-flash', 'MiMo V2.6 Flash'],
@@ -460,6 +469,18 @@ export function resolvePrice(provider, model, settings, at = Date.now()) {
   if (isDeepSeekProvider(provider)) {
     const official = deepSeekPrice(model, settings, at)
     if (official !== null) return official
+  }
+  if (/^dots3(?:[-_.]|$)/i.test(model)) {
+    return {
+      ...DOTS3_NOTE_PREV_PRICE,
+      source: 'list',
+      estimated: false,
+      official: true,
+      cashEligible: true,
+      currency: 'USD',
+      original: { currency: 'USD', ...DOTS3_NOTE_PREV_PRICE },
+      key: 'dots-official',
+    }
   }
   const list = builtinListPrice(model, settings)
   if (list !== null) return list

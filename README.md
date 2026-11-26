@@ -93,6 +93,7 @@ Plan and credit models are audited against their public list rates:
 | NEX N2.6 (configured character reference) | — | ¥1.20 / 10k characters | — | `usage.c` preferred; output tokens used only when no character count exists |
 | MiMo V2.6 Flash (`amd` route) | ¥1 / 1M | ¥2 / 1M | ¥0.02 / 1M | official list reference; no cash until the route is marked paid |
 | Hunyuan 4 Flash (`amd` route) | ¥0.5 / 1M | ¥2 / 1M | ¥0.02 / 1M | official list reference; 5折 promo is not modeled |
+| Dots3 Note Prev (Dots API) | $0.14 / 1M | $0.28 / 1M | $0.14 / 1M | cash pay-as-you-go; no separate cache price published |
 
 Qwen Token Plan personal tiers (list): Lite ¥39/month (20k credits),
 Essential ¥79 (45k), Standard ¥139 (80k), Pro ¥312 (200k). The first-purchase
@@ -110,7 +111,8 @@ separately. Sources:
 [Anthropic pricing](https://platform.claude.com/docs/en/about-claude/pricing),
 [MOSS model pricing](https://platform.mosi.cn/docs/models/overview),
 [MiMo V2.6 Flash pricing](https://mimo.mi.com/models/en-US/mimo-v2.6-flash),
-[Hunyuan Hy4 Flash pricing](https://cloud.tencent.cn/developer/article/2787195).
+[Hunyuan Hy4 Flash pricing](https://cloud.tencent.cn/developer/article/2787195),
+[Dots API docs](https://dots.ai/platform/docs).
 
 Reference totals are deliberately labelled `按量参考` on the board and in the
 desktop window. They answer “what would these tokens cost at the public

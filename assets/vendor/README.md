@@ -13,6 +13,7 @@ identification; all trademarks remain the property of their owners.
 | `openai.svg` | [OpenAI official favicon](https://openai.com/favicon.svg) |
 | `moss.svg` | [MOSS / MOSI official favicon](https://mosi.cn/favicon.svg) |
 | `mimo.svg` | [Xiaomi MiMo official GitHub organization avatar](https://github.com/XiaomiMiMo) |
+| `dots.svg` | [Dots official platform favicon](https://dots.ai/platform/docs) |
 | `gemini.svg`, `grok.svg`, `xai.svg`, `kimi.svg`, `zhipu.svg`, `minimax.svg`, `meta.svg`, `mistral.svg`, `doubao.svg`, `hunyuan.svg`, `baidu.svg`, `cohere.svg`, `perplexity.svg` | [LobeHub Icons](https://lobehub.com/icons), MIT |
 
 The host serves these files read-only from `/dsh-usage/api/vendor/<name>.svg`.
